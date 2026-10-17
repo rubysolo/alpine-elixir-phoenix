@@ -15,9 +15,9 @@ To boot straight to a prompt in the image:
 
 ```
 $ docker run --rm -it --user=1000001 blinker/alpine-elixir-phoenix iex
-Erlang/OTP 23 [erts-11.0.2] [source] [64-bit] [smp:2:2] [ds:2:2:10] [async-threads:1]
+Erlang/OTP 29 [erts-17.1.1] [source] [64-bit] [smp:2:2] [ds:2:2:10] [async-threads:1] [jit]
 
-Interactive Elixir (1.10.4) - press Ctrl+C to exit (type h() ENTER for help)
+Interactive Elixir (1.20.4) - press Ctrl+C to exit (type h() ENTER for help)
 iex(1)>
 ```
 
