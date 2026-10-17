@@ -1,4 +1,4 @@
-FROM hexpm/elixir:1.15.4-erlang-25.3.2.4-alpine-3.17.4
+FROM hexpm/elixir:1.20.4-erlang-29.1.2-alpine-3.24.2
 
 # Install build tools
 RUN \
@@ -14,10 +14,10 @@ RUN \
       inotify-tools \
       nodejs \
       npm \
+      postgresql-client \
       python3 \
       vim \
       wget && \
-    npm install npm -g --no-progress && \
     update-ca-certificates --fresh && \
     rm /etc/ssl/cert.pem && ln -s /etc/ssl/certs/ca-certificates.crt /etc/ssl/cert.pem && \
     ln -nfs /usr/bin/python3 /usr/bin/python && \
