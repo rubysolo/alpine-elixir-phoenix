@@ -14,7 +14,7 @@ It is highly recommended that you add a `USER default` instruction to the end of
 To boot straight to a prompt in the image:
 
 ```
-$ docker run --rm -it --user=1000001 blinker/alpine-elixir-phoenix iex
+$ docker run --rm -it --user=1000001 rubysolo/alpine-elixir-phoenix iex
 Erlang/OTP 29 [erts-17.1.1] [source] [64-bit] [smp:2:2] [ds:2:2:10] [async-threads:1] [jit]
 
 Interactive Elixir (1.20.4) - press Ctrl+C to exit (type h() ENTER for help)
@@ -24,7 +24,7 @@ iex(1)>
 Extending for your own application:
 
 ```dockerfile
-FROM blinker/alpine-elixir-phoenix:latest
+FROM rubysolo/alpine-elixir-phoenix:latest
 
 # Set exposed ports
 EXPOSE 5000
@@ -70,7 +70,7 @@ You can also leverage [docker multistage build](https://docs.docker.com/develop/
 An example is shown below:
 
 ```dockerfile
-FROM blinker/alpine-elixir-phoenix:latest AS phx-builder
+FROM rubysolo/alpine-elixir-phoenix:latest AS phx-builder
 
 # Set exposed ports
 ENV MIX_ENV=prod
